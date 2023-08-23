@@ -1,0 +1,42 @@
+doctype html
+html(lang='es')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Registrar Curriculum
+    // Include any required CSS stylesheets here
+    link(rel="stylesheet", href="/stylesheets/stylesolicitudprestamo.css")
+    include navbar.pug
+  body
+    #logo
+      h1.logo Registrar Curriculum
+    .form-container
+      form(action="/curriculum", method="post")
+        .form-group
+          label(for="Nombre") Nombre completo
+          input(type="text", id="txtNombre", name="txtNombre", required)
+        
+        .form-group
+          label(for="Datos") Datos de contacto
+          input(type="text", id="txtDatos", name="txtDatos", required)
+        
+        .form-group
+          label(for="Experiencia") Experiencia laboral
+          input(type="text", id="txtExperiencia", name="txtExperiencia", required)
+        
+        .form-group
+          label(for="Formacion") Formación académica
+          input(type="text", id="txtFormacion", name="txtFormacion", required)
+        
+        .form-group
+          label(for="Aptitudes") Aptitudes y habilidades
+          input(type="text", id="txtAptitudes", name="txtAptitudes", required)
+        
+        .form-group
+          label(for="Idiomas") Idiomas
+          input(type="text", id="txtIdiomas", name="txtIdiomas", required)
+        
+        button(type="submit") Enviar Curriculum
+
+    // Include any required JavaScript scripts here
+    script(src="/scripts/curriculum.js")

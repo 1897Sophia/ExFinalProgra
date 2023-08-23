@@ -1,0 +1,33 @@
+doctype html
+html(lang='es')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= title
+    include navbar.pug
+  body
+    h1 Lista de Curriculums
+
+    table
+      thead
+        tr
+          th Nombre
+          th Datos de Contacto
+          th Experiencia
+          th Formación
+          th Aptitudes
+          th Idiomas
+
+tbody
+  if curriculums
+    each curriculum in curriculums
+      tr
+        td= curriculum.Nombre
+        td= curriculum.DatosContacto
+        td= curriculum.Experiencia
+        td= curriculum.Formacion
+        td= curriculum.Aptitudes
+        td= curriculum.Idiomas
+        td
+          a(href=`/edit/${curriculum._id}`) Editar        
+
